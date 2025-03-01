@@ -1,0 +1,30 @@
+.auction-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.auction-item {
+    background: #f9f9f9; /* Light background for items */
+    padding: 20px;
+    margin: 10px 0; /* Space between items */
+    border-radius: 5px; /* Slight rounding */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.auction-item:hover {
+    background: #e0e0e0; /* Change background on hover */
+}
+
+.auction-item a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+}
+
+.auction-item h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.auction-item p {
+    margin: 5px 0; /* Space between paragraphs */
+}
