@@ -1,0 +1,393 @@
+.content
+{
+  text-align: center;
+  /* background-color: lightblue; */
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d4edda; /* Light green background */
+  color: #333; /* Dark text */
+  font-family: 'Arial', sans-serif; /* Clean font */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Column layout */
+  min-height: 100vh; /* Full height */
+}
+
+.app {
+  max-width: 100%; /* Full width */
+  margin: 0; /* Remove margin */
+  padding: 20px;
+  background: #1bb145;
+  border-radius: 0; /* No border radius */
+  box-shadow: none; /* No shadow */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Column layout */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 200px; /* Fixed width for sidebar */
+  background: #dee5f3; /* Sidebar color */
+  color: rgb(247, 10, 10);
+  padding: 20px;
+  border-radius: 0; /* No border radius */
+  position: fixed; /* Fixed position */
+  height: 100%; /* Full height */
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1; /* Take remaining space */
+  padding: 20px;
+  margin-left: 220px; /* Space for sidebar */
+}
+
+/* Button styles */
+button {
+  background: #dcc2f8; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #061124; /* Hover effect */
+}
+
+/* Card styles for auction items */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: none; /* Remove card border */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+header {
+  background: linear-gradient(90deg, #b388e0 0%, #2575fc 100%);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #6a11cb;
+  padding-bottom: 5px;
+}
+
+.form-container {
+  background: #a70d0d;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+nav {
+  margin: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #f0f9f4;
+  color: #3DDC84;
+}
+
+.welcome-text {
+  color: #3DDC84;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background: none;
+  border: 2px solid #3DDC84;
+  color: #3DDC84;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #3DDC84;
+  color: white;
+}
+
+.footer {
+  background-color: #d4edda; /* Light green for footer */
+  color: #333; /* Dark text */
+  text-align: center; /* Centered text */
+  padding: 10px 0; /* Padding for footer */
+  margin-top: auto; /* Push footer to the bottom */
+  font-size: 0.9rem; /* Smaller font size */
+  width: 100%; /* Full width */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.message {
+  color: #d9534f; /* Bootstrap danger color */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-title {
+  color: #007bff; /* Primary color for titles */
+}
+
+.card-text {
+  color: #6c757d; /* Secondary text color */
+}
+
+.btn {
+  border-radius: 25px; /* Rounded corners */
+}
+
+.btn-primary {
+  background-color: #d4edda; /* Light green button color */
+  color: #333; /* Dark text for button */
+  border: 1px solid #333; /* Dark border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 1rem; /* Font size */
+}
+
+.btn-primary:hover {
+  background-color: #c3e6cb; /* Slightly darker green on hover */
+  color: #333; /* Dark text on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Bootstrap danger color */
+  border: none; /* Remove border */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.container {
+  max-width: 1200px; /* Center the content */
+  margin: auto; /* Center the container */
+  padding: 20px; /* Add padding */
+}
+
+.header {
+  text-align: center; /* Center the header */
+  padding: 50px 20px; /* Add padding */
+  background: linear-gradient(135deg, #A8E6CF, #D4E157); /* Gradient from light green to a slightly darker green */
+  color: #333; /* Dark text for the main heading */
+}
+
+.header h1 {
+  font-size: 3rem; /* Large heading */
+  margin: 0; /* Remove default margin */
+}
+
+.header p {
+  font-size: 1.2rem; /* Subheading */
+  margin-bottom: 30px; /* Space below */
+  color: #333; /* Dark text */
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 25px 0 0 25px; /* Rounded left corners */
+  border: none; /* Remove border */
+  width: 300px; /* Fixed width */
+}
+
+.search-bar button {
+  border-radius: 0 25px 25px 0; /* Rounded right corners */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding */
+  background-color: #28a745; /* Green button */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.search-bar button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* New styles for the auction image */
+.auction-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 0; /* Space around the image */
+}
+
+.signup-container {
+    max-width: 1500px; /* Increased width for a more professional look */
+    margin: 50px auto; /* Center the form with top margin */
+    padding: 30px; /* Increased padding */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    height: 50px;
+}
+
+.signup-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark text */
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column; /* Stack the inputs */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+.signup-container label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+    color: #333; /* Dark text */
+}
+
+.signup-container input {
+    padding: 12px; /* Increased padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+}
+
+.signup-container button {
+    padding: 12px; /* Increased padding for button */
+    background-color: #3DDC84; /* Parrot green */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.signup-container button:hover {
+    background-color: #36b76e; /* Darker green on hover */
+}
+

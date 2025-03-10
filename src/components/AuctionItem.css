@@ -1,0 +1,354 @@
+.auction-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.auction-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auction-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auction-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.no-image {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+
+.auction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auction-info h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.bid-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.bid-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.starting-bid {
+    text-align: left;
+}
+
+.starting-bid h4 {
+    color: #666;
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+.starting-bid span {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.current-bid {
+    text-align: right;
+}
+
+.current-bid h3 {
+    color: #3DDC84;
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.highest-bidder {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.bid-form {
+    margin-top: 20px;
+}
+
+.bid-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.bid-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.bid-input:focus {
+    border-color: #3DDC84;
+    box-shadow: 0 0 0 2px rgba(61, 220, 132, 0.1);
+}
+
+.bid-button {
+    padding: 12px 25px;
+    background: #3DDC84;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bid-button:hover {
+    background: #32b76e;
+    transform: translateY(-2px);
+}
+
+.auction-meta {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.meta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.meta-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.label {
+    color: #666;
+    font-size: 14px;
+}
+
+.value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.username-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.username-modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.username-modal-content h3 {
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.username-modal-content input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.username-modal-content input:focus {
+    border-color: #3DDC84;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(61, 220, 132, 0.1);
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+    background: #3DDC84;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background: #f8f9fa;
+    color: #666;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.modal-buttons button:first-child:hover {
+    background: #32b76e;
+}
+
+.modal-buttons button:last-child:hover {
+    background: #e9ecef;
+}
+
+.time-remaining {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.time-label {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.time-value {
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 8px 15px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Add animation for when time is running low (less than 1 hour) */
+.time-value.urgent {
+    color: #ff4444;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auction-details {
+        grid-template-columns: 1fr;
+    }
+
+    .auction-image {
+        max-height: 400px;
+    }
+
+    .bid-input-group {
+        flex-direction: column;
+    }
+
+    .bid-button {
+        width: 100%;
+    }
+
+    .bid-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .starting-bid, .current-bid {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .time-remaining {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .time-value {
+        font-size: 18px;
+    }
+}
